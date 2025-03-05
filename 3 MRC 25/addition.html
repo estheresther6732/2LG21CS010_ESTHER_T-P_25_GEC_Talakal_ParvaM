@@ -6,27 +6,44 @@
     <title> JS Ex 1</title>
 </head>
 <body>
-    <h1>JavaScript Addition</h1>
-    <div>
-        <label for first name>First name</label>
-        <input type="text"id="txt1" value="" placeholder="Enter your first name"></div>
+
+        <h1 style="color: rgb(255, 0, 34);"> JS Example 2</h1>
+    
         <div>
-            <label for last name>Last name</label>
-            <input type="text"id="txt2" value="" placeholder="Enter your last name"></div>
-        <div><button onclick="getfullname()">submit</button></div> 
+        <label for="txt1">Value1</label>
+        <input type="text"id="val1" value="" name="val1" placeholder="Enter number"></div>
+        <div>
+            <label for="txt2">Value2</label>
+            <input type="text"id="val2" value="" name="val2" placeholder="Enter number"></div>
+        <div><button onclick="getResult()">submit </button></div> 
 
-        <h1 style="color: blue;" id="flname"></h1>
+        <h1 style="color: rgb(255, 174, 0);" id="flnumber"></h1>
 
+   
+    <script>
+        function getfullname(){
+            
+            var val1=document.getElementById('text1').value;
+            var lname=document.getElementById('text2').value;
+            var fullname = fname +" " + lname;
+            document.getElementById('flname').innerHTML = fullname;
+        }
 
-<p id="demo"></p>
+        function getResult(){
+            
+            var val1 =document.getElementById('val1').value;
+            var val2 =document.getElementById('val2').value;
+            var result;
 
-<script>
-let x = 5;
-let y = 2;
-let z = x + y;
-document.getElementById("demo").innerHTML = z;
-</script>
-    
-    
+            if(!isNaN(val1) && !isNaN(val2)){
+                result=parseFloat(val1)+parseFloat(val2);
+            }else{
+                result= val1+val2;
+            }
+            
+            `
+             document.getElementById('flnumber').innerHTML = result;
+        }
+    </script>    
 </body>
 </html>
